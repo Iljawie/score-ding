@@ -12,6 +12,10 @@ var winningscore = 5;
 
 console.log(winningScoreDisplay);
 
+document.getElementById("reset").addEventListener("click", function () {reset()});
+  
+resetButton.addEventListener("on click", console.log("reset clicked") /* reset() */);
+
 p1Button.addEventListener("click", function() {
 	if(!gameState){
 		p1Score++;
@@ -26,8 +30,6 @@ p2button.addEventListener("click", function (){
 		p2Display.textContent =p2Score;};
 });
 
-resetButton.addEventListener("click", reset());
-
 function reset(){
 	p1Score=0;
 	p2Score=0;
@@ -37,7 +39,7 @@ function reset(){
 	p2Display.classList.remove("winner");
 	gameState =false;
 	console.log("reset");
-}
+	}
 
 numInput.addEventListener("change", function (){
 console.log(numInput.value);
